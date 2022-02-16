@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   resources :books
   resources :students
-  get 'home/index'
+  get 'books/index'
   get 'home/about'
-  root 'home#index'
+  get  'students/index'
+  root 'books#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
