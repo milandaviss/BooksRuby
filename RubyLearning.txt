@@ -1,0 +1,92 @@
+Ruby on Rails
+=============================
+Ruby is a mvc
+-> models are databases
+->views are webpages
+-> controllers -> coding stuff comes under controller.
+
+Models
+views ->webpages are added to 
+
+routes-> every page needs a route.
+
+Generator
+rails g controller home index
+->we want controller to be in home and index as view
+
+-> create  app/controllers/home_controller.rb
+       route  get 'home/index'
+      invoke  erb
+      create    app/views/home
+      create    app/views/home/index.html.erb
+      invoke  test_unit
+      create    test/controllers/home_controller_test.rb
+      invoke  helper
+      create    app/helpers/home_helper.rb
+      invoke    test_unit
+
+
+edit routes in config  folder	
+->To make a page homepage =>    root 'home#index'
+
+rails routes=> prints all routes
+
+to add a html file add in views, create a route, add def method in 
+go  inside controller and add a def method
+
+
+=> To add bootstrap go to bootstrap website download template.
+Then add to application.html file
+
+
+to add partials
+=======================
+-> we save a file as _header.html.erb
+<%=render 'home/header %> => it tells rails its a partial render 
+
+
+To add links 
+======================
+<%= link_to 'Friend App',root_path,class:"navbar-brand" %>
+=> This creates an an anchor tag with Text "Friend App", refering to root_path , with bootstrap class navbar-brand
+
+<%= link_to 'About Us',home_about_path,class:"nav-link"%>
+First is text of the anchor tag, second is the route of anchor tag, third is class of anchor tag
+
+rails routes -> to know routes
+
+
+
+application_gtml_erb is the main html file which conatains all the 
+
+-> creating a database table
+rails g scaffold friends first_name:string last_name:string email:string phone:string twitter:string
+
+
+
+rails db:migrate
+
+
+resources : friends
+
+
+<div id="books">
+  <% @books.each do |book| %>
+    <%= render book %>
+    <p>
+      <%= link_to "Show this book", book %>
+    </p>
+  <% end %>
+</div> -->
+
+
+
+jumbotron
+=====================
+
+add jumbotron from bootstrap
+
+
+
+
+
