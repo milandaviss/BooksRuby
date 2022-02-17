@@ -1,17 +1,19 @@
 <div id="<%= dom_id student %>">
-  <p>
-    <strong>First name:</strong>
-    <%= student.first_name %>
+
+  <div class="card">
+  <h5 class="card-header">Student Details</h5>
+  <div class="card-body">
+    <strong>Name:</strong>
+    <%= student.name %>
   </p>
 
   <p>
-    <strong>Last name:</strong>
-    <%= student.last_name %>
+    <strong>Address:</strong>
+    <%= student.address %>
   </p>
 
   <p>
     <strong>Phone:</strong>
     <%= student.phone %>
-  </p>
-
+  </div>
 </div>

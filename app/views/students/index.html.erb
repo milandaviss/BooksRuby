@@ -2,13 +2,36 @@
 
 <h1>Students</h1>
 
-<div id="students">
-  <% @students.each do |student| %>
-    <%= render student %>
-    <p>
-      <%= link_to "Show this student", student %>
-    </p>
-  <% end %>
-</div>
 
-<%= link_to "New student", new_student_path %>
+<div id="students">
+  <div class="jumbotron" >
+  <table class="table table-striped table-bordered table-hover">
+      <thead class="table-light">
+      <tr>
+        <th>Student Name</th>
+         
+        <th>Student Address</th>
+        
+        <th>Phone</th>
+        <th></th>
+        <th></th>
+
+    </thead>
+    <tbody>
+      <% @students.each do |student| %>
+      <tr>
+        <td><%=student.name%></td>
+        <td><%=student.address%></td>
+        <td ><%=student.phone%></td>
+        <td> <%= link_to "Show this student", student %> </td>
+        <td><%= link_to "Edit this studet", edit_student_path(student) %> </td>
+        <td><%= button_to "Delete", student, method: :delete ,class:'btn btn-danger' %></td>
+      </tr>
+      <%end %>
+    </tbody>
+</table>
+
+
+
+
+<%= link_to "New student", new_student_path,class:'btn btn-success' %>
